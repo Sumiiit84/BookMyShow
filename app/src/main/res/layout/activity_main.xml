@@ -10,6 +10,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="git pull origin main&#xA;" />
+
     <LinearLayout
         android:id="@+id/TooL"
         android:layout_width="match_parent"
@@ -43,33 +50,33 @@
         android:paddingBottom="10dp"
         app:srcCompat="@android:drawable/ic_menu_search" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="60dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:layout_height="60dp"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:elevation="81dp"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/notification" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingEnd="10dp"-->
+<!--        android:paddingRight="10dp"-->
+<!--        android:paddingBottom="10dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:clickable="true"-->
+<!--        android:elevation="81dp"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        app:srcCompat="@drawable/notification" />-->
 
-    <ImageView
-        android:id="@+id/Aiicon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:layout_weight="1"
-        android:rotationY="0"
-        app:srcCompat="@drawable/aiicon" />
+<!--    <ImageView-->
+<!--        android:id="@+id/Aiicon"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:paddingTop="10dp"-->
+<!--        android:paddingEnd="10dp"-->
+<!--        android:paddingRight="10dp"-->
+<!--        android:paddingBottom="10dp"-->
+<!--        android:layout_weight="1"-->
+<!--        android:rotationY="0"-->
+<!--        app:srcCompat="@drawable/aiicon" />-->
 
     </LinearLayout>
     
