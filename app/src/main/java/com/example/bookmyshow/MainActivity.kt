@@ -26,12 +26,7 @@ class MainActivity : AppCompatActivity() {
 
 
         }
-        supportActionBar?.hide()
-        val toolbar: Toolbar = findViewById(R.id.TooL)
-        setSupportActionBar(toolbar)
 
-        val toolbarImage: ImageView = findViewById(R.id.AppIcon)
-        toolbarImage.setImageResource(R.drawable.image1)
 
     }
 
