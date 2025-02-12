@@ -5,9 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
     android:id="@+id/main"
+    android:background="@color/cardview_light_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="git pull origin main&#xA;" />
 
     <LinearLayout
         android:id="@+id/TooL"
@@ -71,4 +79,5 @@
 <!--        app:srcCompat="@drawable/aiicon" />-->
 
     </LinearLayout>
+    
 </LinearLayout>
