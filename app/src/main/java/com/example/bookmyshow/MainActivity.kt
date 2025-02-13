@@ -9,6 +9,8 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.widget.HorizontalScrollView
+import android.widget.SeekBar
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,12 +26,29 @@ class MainActivity : AppCompatActivity() {
             insets
 
 
-
         }
 
+        val scrollView = findViewById<HorizontalScrollView>(R.id.horizontalScrollView)
+        val seekBar = findViewById<SeekBar>(R.id.seekBar)
 
+        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                val scrollRange = scrollView.getChildAt(0).width - scrollView.width
+                val scrollX = (scrollRange * progress) / seekBar.max
+                scrollView.scrollTo(scrollX, 0)
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar) {}
+
+            override fun onStopTrackingTouch(seekBar: SeekBar) {}
+        })
     }
-
-
-
 }
+
+
+
+
+
+
+
+
