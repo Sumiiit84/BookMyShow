@@ -3,24 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:id="@+id/main"
     android:background="@color/cardview_light_background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="git pull origin main&#xA;" />
-
     <LinearLayout
         android:id="@+id/TooL"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+       android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:background="@android:color/holo_red_dark"
         android:elevation="4dp">
 
@@ -39,7 +33,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/image1" />
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/search"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_weight="1"
@@ -50,34 +44,75 @@
         android:paddingBottom="10dp"
         app:srcCompat="@android:drawable/ic_menu_search" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView2"-->
-<!--        android:layout_width="60dp"-->
-<!--        android:paddingLeft="10dp"-->
-<!--        android:paddingTop="10dp"-->
-<!--        android:paddingEnd="10dp"-->
-<!--        android:paddingRight="10dp"-->
-<!--        android:paddingBottom="10dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:clickable="true"-->
-<!--        android:elevation="81dp"-->
-<!--        android:scaleType="fitCenter"-->
-<!--        app:srcCompat="@drawable/notification" />-->
+        <ImageView
+            android:id="@+id/notification"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/notification" />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/Aiicon"-->
-<!--        android:layout_width="60dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:paddingLeft="10dp"-->
-<!--        android:paddingTop="10dp"-->
-<!--        android:paddingEnd="10dp"-->
-<!--        android:paddingRight="10dp"-->
-<!--        android:paddingBottom="10dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:rotationY="0"-->
-<!--        app:srcCompat="@drawable/aiicon" />-->
+        <ImageView
+            android:id="@+id/Aiicon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            app:srcCompat="@drawable/aiicon" />
+
+
+
+
 
     </LinearLayout>
-    
+
+    <LinearLayout
+        android:id="@+id/nextheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/disney"
+            android:layout_margin="20dp"
+            android:layout_weight="20" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/netflix"
+            android:layout_margin="20dp"
+            android:layout_weight="20"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/zee5"
+            android:layout_margin="20dp"
+            android:layout_weight="20"/>
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/jiocinema"
+            android:layout_margin="20dp"
+            android:layout_weight="20"/>
+
+    </LinearLayout>
+
 </LinearLayout>
+
+
+
