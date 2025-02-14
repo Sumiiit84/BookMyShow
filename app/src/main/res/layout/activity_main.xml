@@ -10,139 +10,123 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Toolbar -->
     <LinearLayout
         android:id="@+id/TooL"
         android:layout_width="match_parent"
-       android:layout_height="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@android:color/holo_red_dark"
+        android:background="@color/design_default_color_error"
         android:elevation="4dp">
 
         <ImageView
             android:id="@+id/AppIcon"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingEnd="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:padding="10dp"
             app:srcCompat="@drawable/image1" />
-    <ImageView
-        android:id="@+id/search"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_weight="1"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        app:srcCompat="@android:drawable/ic_menu_search" />
 
- HEAD
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="60dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:layout_height="60dp"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:elevation="81dp"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/notification" />
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            app:srcCompat="@android:drawable/ic_menu_search" />
 
-    <ImageView
-        android:id="@+id/Aiicon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingEnd="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:layout_weight="1"
-        android:rotationY="0"
-        app:srcCompat="@drawable/aiicon" />
-=======
-<!--        <ImageView-->
-<!--            android:id="@+id/notification"-->
-<!--            android:layout_width="60dp"-->
-<!--            android:layout_height="60dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:paddingLeft="10dp"-->
-<!--            android:paddingTop="10dp"-->
-<!--            android:paddingEnd="10dp"-->
-<!--            android:paddingRight="10dp"-->
-<!--            android:paddingBottom="10dp"-->
-<!--            app:srcCompat="@drawable/notification" />-->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:clickable="true"
+            android:elevation="81dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/notification" />
 
-<!--        <ImageView-->
-<!--            android:id="@+id/Aiicon"-->
-<!--            android:layout_width="60dp"-->
-<!--            android:layout_height="60dp"-->
-<!--            android:layout_weight="1"-->
-<!--            android:paddingLeft="10dp"-->
-<!--            android:paddingTop="10dp"-->
-<!--            android:paddingEnd="10dp"-->
-<!--            android:paddingRight="10dp"-->
-<!--            android:paddingBottom="10dp"-->
-<!--            app:srcCompat="@drawable/aiicon" />-->
-
-
-
-
->>>>>>> aa9346a7d4bbd399f4bb7193aea72fd72d468613
+        <ImageView
+            android:id="@+id/Aiicon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/aiicon" />
 
     </LinearLayout>
 
+    <!-- Streaming Platforms -->
     <LinearLayout
         android:id="@+id/nextheader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:elevation="4dp">
+        android:gravity="center"
+        android:padding="10dp">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/disney"
-            android:layout_margin="20dp"
-            android:layout_weight="20" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            android:layout_margin="10dp">
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/netflix"
-            android:layout_margin="20dp"
-            android:layout_weight="20"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/disney"/>
+        </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/zee5"
-            android:layout_margin="20dp"
-            android:layout_weight="20"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp"
+            android:layout_margin="10dp">
 
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/netflix"/>
+        </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/jiocinema"
-            android:layout_margin="20dp"
-            android:layout_weight="20"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="4dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/zee5"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardCornerRadius="40dp"
+            app:cardElevation="4dp"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/jiocinema"/>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
+    <!-- Banner ViewPager -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/bannerViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"/>
+
 </LinearLayout>
-
-
-
