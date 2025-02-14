@@ -1,5 +1,6 @@
 package com.example.bookmyshow
 
+
 import android.os.Bundle
 import android.view.Menu
 import android.widget.ImageView
@@ -12,6 +13,10 @@ import androidx.core.view.WindowInsetsCompat
 import android.widget.HorizontalScrollView
 import android.widget.SeekBar
 import androidx.viewpager2.widget.ViewPager2
+import androidx.recyclerview.widget.RecyclerView
+import com.example.bookmyshow.R
+import androidx.recyclerview.widget.LinearLayoutManager
+
 
 
 
@@ -39,6 +44,18 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.viewPager)
         val adapter = ImageAdapter(this, imageList)
         viewPager.adapter = adapter
+
+
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+
+        val movies = listOf(
+            Movie("Chhaava", R.drawable.sample_movie, "334.1K likes"),
+            Movie("Captain America: Brave New World", R.drawable.captain_america, "132.2K likes"),
+            Movie("Sky Force", R.drawable.sky_force, "8.9 ★ 53K votes")
+        )
+
+        recyclerView.adapter = MovieAdapter(movies)
     }
 
 
