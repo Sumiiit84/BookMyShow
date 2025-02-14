@@ -11,10 +11,18 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.HorizontalScrollView
 import android.widget.SeekBar
+import androidx.viewpager2.widget.ViewPager2
+
 
 
 class MainActivity : AppCompatActivity() {
-
+    private lateinit var viewPager: ViewPager2
+    private val imageList = listOf(
+        R.drawable.ad1,
+        R.drawable.ad2,
+        R.drawable.ad3,
+        R.drawable.ad4
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -28,22 +36,17 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        val scrollView = findViewById<HorizontalScrollView>(R.id.horizontalScrollView)
-        val seekBar = findViewById<SeekBar>(R.id.seekBar)
-
-        seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-            override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
-                val scrollRange = scrollView.getChildAt(0).width - scrollView.width
-                val scrollX = (scrollRange * progress) / seekBar.max
-                scrollView.scrollTo(scrollX, 0)
-            }
-
-            override fun onStartTrackingTouch(seekBar: SeekBar) {}
-
-            override fun onStopTrackingTouch(seekBar: SeekBar) {}
-        })
+        viewPager = findViewById(R.id.viewPager)
+        val adapter = ImageAdapter(this, imageList)
+        viewPager.adapter = adapter
     }
+
+
 }
+
+
+
+
 
 
 
