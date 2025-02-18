@@ -16,8 +16,9 @@ import androidx.viewpager2.widget.ViewPager2
 import androidx.recyclerview.widget.RecyclerView
 import com.example.bookmyshow.R
 import androidx.recyclerview.widget.LinearLayoutManager
-
-
+import com.example.bookmyshow.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         R.drawable.ad3,
         R.drawable.ad4
     )
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -47,18 +50,52 @@ class MainActivity : AppCompatActivity() {
 
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         val movies = listOf(
             Movie("Chhaava", R.drawable.sample_movie, "334.1K likes"),
             Movie("Captain America: Brave New World", R.drawable.captain_america, "132.2K likes"),
-            Movie("Sky Force", R.drawable.sky_force, "8.9 ★ 53K votes")
+            Movie("Sky Force", R.drawable.sky_force, "8.9 ★ 53K votes"),
+            Movie("Loveyapa", R.drawable.loveya, "8 ★ 3.5K votes"),
+            Movie("Deva", R.drawable.deva, "7.5 ★ 18.1k votes")
         )
-
         recyclerView.adapter = MovieAdapter(movies)
+
+
+
+
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    Toast.makeText(this, "Home Clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                R.id.nav_movies -> {
+                    Toast.makeText(this, "Movies Clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                R.id.nav_live_events -> {
+                    Toast.makeText(this, "Live Events Clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                R.id.nav_profile -> {
+                    Toast.makeText(this, "Profile Clicked", Toast.LENGTH_SHORT).show()
+                    true
+                }
+
+                else -> false
+            }
+
+        }
+
     }
-
-
 }
 
 

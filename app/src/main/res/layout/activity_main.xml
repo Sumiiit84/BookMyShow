@@ -147,6 +147,27 @@
         android:paddingTop="8dp"
         android:scrollbars="horizontal"
         android:orientation="horizontal" />
+
+
+
+    <!-- Scrollable Content  -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_alignParentBottom="true"/>
+
 </LinearLayout>
 
 
